@@ -29,7 +29,7 @@ define([
             matrixType: 'type1',
 
             _init: function () {
-                this.enabled = !!window.productmatrix.enabled && !!this.options.jsonConfig.enableProductMattrix;
+                this.enabled = !!window.productmatrix.enabled && !!this.options.jsonConfig.enableProductMatrix;
 
                 var total = Object.keys(this.options.jsonConfig.attributes).length;
                 if (total>=2) {
@@ -641,7 +641,7 @@ define([
             isFakeMode: function() {
                 const jsConfig = this.options.jsonConfig;
                 var total = Object.keys(jsConfig.attributes).length;
-                return jsConfig.enableProductMattrix && !!jsConfig.fakeHeadingLabel && !!jsConfig.fakeAttributeLabel && (total === 1 || _.isArray(jsConfig.attributes) && total === 2 && jsConfig.attributes[1]['id'] === 'fake');
+                return jsConfig.enableProductMatrix && !!jsConfig.fakeHeadingLabel && !!jsConfig.fakeAttributeLabel && (total === 1 || _.isArray(jsConfig.attributes) && total === 2 && jsConfig.attributes[1]['id'] === 'fake');
             }
         });
 
